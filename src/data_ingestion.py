@@ -65,6 +65,6 @@ class DataIngestion:
         finally:
             logger.info("Data ingestion completed")
             
-if __name__ == "__main__":
-    data_ingestion = DataIngestion(read_yaml(CONFIG_PATH))
-    data_ingestion.run()
+# if __name__ == "__main__":
+#     data_ingestion = DataIngestion(read_yaml(CONFIG_PATH))
+#     data_ingestion.run()
