@@ -145,7 +145,7 @@ class DataProcessor:
             test_df = self.balance_data(test_df)
             
             train_df = self.select_features(train_df)
-            test_df  - test_df[train_df.columns]
+            test_df  = test_df[train_df.columns]
             
             self.save_data(train_df,PROCESSED_TRAIN_DATA_PATH)
             self.save_data(test_df,PROCESSED_TEST_DATA_PATH)
@@ -156,6 +156,6 @@ class DataProcessor:
             logger.error(f"Error during data processing {e}")
             raise CustomException("Error while data preprocessing", e)
         
-if __name__ == "__main__":
-    processor = DataProcessor(TRAIN_FILE_PATH, TEST_FILE_PATH, PROCESSED_DIR, CONFIG_PATH)
-    processor.process()
+# if __name__ == "__main__":
+#     processor = DataProcessor(TRAIN_FILE_PATH, TEST_FILE_PATH, PROCESSED_DIR, CONFIG_PATH)
+#     processor.process()
