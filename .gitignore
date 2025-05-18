@@ -2,3 +2,4 @@ venv
 hotel_reservation_prediction.egg-info
 logs    
 notebook/*.pkl
+mlruns
