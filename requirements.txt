@@ -3,3 +3,8 @@ numpy
 google-cloud-storage
 scikit-learn
 pyyaml
+xgboost 
+lightgbm
+statsmodels
+seaborn
+imblearn
