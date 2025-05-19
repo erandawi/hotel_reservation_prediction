@@ -1,0 +1,133 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Container with glass effect */
+.container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 600px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #182848;
+}
+
+/* Form elements */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+input, select {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+input:focus, select:focus {
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(75, 108, 183, 0.4);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4B6CB7, #182848);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #182848, #4B6CB7);
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(75, 108, 183, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Result area */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Client-friendly messages */
+.result p {
+    font-size: 1.2rem;
+    color: #4B6CB7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 30px;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+}

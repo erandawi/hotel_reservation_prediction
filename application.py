@@ -11,7 +11,7 @@ loaded_model = joblib.load(MODEL_OUTPUT_PATH)
 def index():
     if request.method=='POST':
         
-        lead_time = int(request.form["Lead_time"])
+        lead_time = int(request.form["lead_time"])
         no_of_special_request = int(request.form["no_of_special_request"])
         avg_price_per_room = float(request.form["avg_price_per_room"])
         arrival_month = int(request.form["arrival_month"])

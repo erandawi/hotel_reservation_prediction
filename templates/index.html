@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
     <title>HOTEL RESERVATION PREDICTION</title>
 </head>
 <body>
@@ -46,7 +47,6 @@
             <div class="form-group">
                 <label for="arrival_date">Arrival Date</label>
                 <select id="arrival_date" name="arrival_date" required>
-                    <!-- Options 1 to 31 -->
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -127,12 +127,13 @@
 
             <button type="submit">Predict</button>
         </form>
-        {% if prediction is not none%}
+
+        {% if prediction is not none %}
         <div class="result">
-            {% if prediction  == 0 %}
-            <p> The Customer is going to cancel his reservation </p>
-            {% elif prediction  == 1 %}
-            <p> The Customer is not going to cancel his reservation </p>
+            {% if prediction == 0 %}
+            <p>The Customer is going to cancel his reservation</p>
+            {% elif prediction == 1 %}
+            <p>The Customer is not going to cancel his reservation</p>
             {% endif %}
         </div>
         {% endif %}
