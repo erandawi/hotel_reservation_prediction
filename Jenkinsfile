@@ -50,7 +50,7 @@ pipeline{
                         docker push gcr.io/${GCP_PROJECT}/ml-project:latest .
                         '''
                     }
-                }
+                
                 }
             }
         }
